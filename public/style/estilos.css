@@ -3,5 +3,18 @@
 }
 
 .fuente {
-    font-family: 'Italianno', cursive;
+    font-family: 'Gluten', cursive;
+}
+
+.parrafo {
+    text-align: center;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.texto {
+    font-size: 20px;
+    text-align: center;
 }
