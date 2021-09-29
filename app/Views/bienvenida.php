@@ -74,24 +74,24 @@
 		<main>
 			<div class="container mt-5">
 				<div class="row d-flex justify-content-center">
-					<div class="col-1">
-						<img src="<?= base_url('public/img/dog-icon.png') ?>" class="d-block w-100" alt="foto">
+					<div class="col-12 col-md-1">
+						<img class="img-fluid w-100" src="<?= base_url('public/img/dog-icon.png') ?>" class="d-block w-100" alt="foto">
 						<h2 class="texto">Perros</h2>
 					</div>
-					<div class="col-1">
-						<img src="<?= base_url('public/img/cat-icon.png') ?>" class="d-block w-100" alt="foto">
+					<div class="col-12 col-md-1">
+						<img class="img-fluid w-100" src="<?= base_url('public/img/cat-icon.png') ?>" class="d-block w-100" alt="foto">
 						<h2 class="texto">Gatos</h2>
 					</div>
-					<div class="col-1">
-					<img src="<?= base_url('public/img/bird-icon.png') ?>" class="d-block w-100" alt="foto">
+					<div class="col-12 col-md-1">
+					<img  class="img-fluid w-100"src="<?= base_url('public/img/bird-icon.png') ?>" class="d-block w-100" alt="foto">
 					<h2 class="texto">Aves</h2>
 					</div>
-					<div class="col-1">
-					<img src="<?= base_url('public/img/fish-icon.png') ?>" class="d-block w-100" alt="foto">
+					<div class="col-12 col-md-1">
+					<img  class="img-fluid w-100" src="<?= base_url('public/img/fish-icon.png') ?>" class="d-block w-100" alt="foto">
 					<h2 class="texto">Reptiles</h2>
 					</div>
-					<div class="col-1">
-					<img src="<?= base_url('public/img/horse-icon.png') ?>" class="d-block w-100" alt="foto">
+					<div class="col-12 col-md-1">
+					<img class="img-fluid w-100" src="<?= base_url('public/img/horse-icon.png') ?>" class="d-block w-100" alt="foto">
 					<h2 class="texto">Caballos</h2>
 					</div>
 				</div>
