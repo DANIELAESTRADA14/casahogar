@@ -25,11 +25,14 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Home</a>
+					<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="<?= site_url('Home')?>">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Link</a>
+							<a class="nav-link" href="<?= site_url('Productos')?>">Registro Productos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Registro Animales</a>
 						</li>
 					</ul>
 				</div>
@@ -66,37 +69,96 @@
 			</div>
 		</div>
 
-		<h1 class=" titulo fuente mt-5">Hogar de animales ANIMALANDIA</h1>
-		<p class="parrafo">
+		<h1 class="titulo fuente mt-5 fw-bold">Hogar de animales ANIMALANDIA</h1>
+		<p class="text-center">
 			La casa hogar ANIMALANDIA abrió sus puertas en 1996. Acoge animales y fauna silvestre en estado de abandono, ofreciendo atención integral, además somos fabricantes de comida y accesorios para todo tipo de mascota.
 		</p>
 
 		<main>
-			<div class="container mt-5">
+			<div class="container mt-5 mb-5">
 				<div class="row d-flex justify-content-center">
 					<div class="col-12 col-md-1">
-						<img class="img-fluid w-100" src="<?= base_url('public/img/dog-icon.png') ?>" class="d-block w-100" alt="foto">
+					<a href="">
+						<img src="<?= base_url('public/img/dog-icon.png')?>" alt="icono1" class="img-fluid w-100 zoom">
+					</a>
 						<h2 class="texto">Perros</h2>
 					</div>
 					<div class="col-12 col-md-1">
-						<img class="img-fluid w-100" src="<?= base_url('public/img/cat-icon.png') ?>" class="d-block w-100" alt="foto">
+					<a href="">
+						<img src="<?= base_url('public/img/cat-icon.png') ?>" class="img-fluid w-100 zoom" alt="foto"> </a>
 						<h2 class="texto">Gatos</h2>
 					</div>
 					<div class="col-12 col-md-1">
-					<img  class="img-fluid w-100"src="<?= base_url('public/img/bird-icon.png') ?>" class="d-block w-100" alt="foto">
+						<a href="">
+					<img src="<?= base_url('public/img/bird-icon.png') ?>" class="img-fluid w-100 zoom"  alt="foto"></a>
 					<h2 class="texto">Aves</h2>
 					</div>
 					<div class="col-12 col-md-1">
-					<img  class="img-fluid w-100" src="<?= base_url('public/img/fish-icon.png') ?>" class="d-block w-100" alt="foto">
+						<a href="">
+					<img src="<?= base_url('public/img/fish-icon.png') ?>" class="img-fluid w-100 zoom"   alt="foto"></a>
 					<h2 class="texto">Reptiles</h2>
 					</div>
 					<div class="col-12 col-md-1">
-					<img class="img-fluid w-100" src="<?= base_url('public/img/horse-icon.png') ?>" class="d-block w-100" alt="foto">
+						<a href="">
+					<img src="<?= base_url('public/img/horse-icon.png') ?>" class="img-fluid w-100 zoom"  alt="foto"></a>
 					<h2 class="texto">Caballos</h2>
 					</div>
 				</div>
 			</div>
+
+			<div class="row fondo1">
+
+			</div>
+			<div class="container mb-5">
+			<div class="row mt-5">
+				<div class="col-12 col-md-6">
+					<img src="<?=base_url('public/img/adopcion.jpg')?>" alt="adopta" class="img-fluid w-100 rounded">
+				</div>
+				<div class="col-12 col-md-6 align-self-center">
+
+					<h2 class="fw-bold">Hogar Animalandia</h2>
+					<p>
+						Somos una organización protectora de animales especializada, desde 1996, en la ayuda a perros y gatos maltratados y/o abandonados; una organización española totalmente independiente que no recibe subvenciones de organismos oficiales, empresas ni partidos políticos. Las cuotas de nuestros socios y las donaciones de nuestros simpatizantes permiten que nuestra labor sea sostenible y preservan nuestra libertad de acción. Contamos con un centro veterinario en Medellín abierto al público, que destina sus ingresos íntegramente al cuidado de los animales abandonados, y un centro de acogida en El Espinar.
+						<br>
+						Defendemos el “sacrificio cero”. Esto significa que establecemos una línea muy clara entre “el sacrificio” y “la eutanasia”. Nunca sacrificamos cachorros recién nacidos, ni animales cojos, ciegos, sordos o con enfermedades crónicas que sean tratables. Exclusivamente en caso de enfermedad en fase terminal que produzca un sufrimiento irreversible, se recurre a la eutanasia con toda la dignidad, el respeto y el amor que ellos merecen.
+					</p>
+
+				</div>
+			</div>
+		</div>
 		</main>
+
+		<footer class="footer">
+			<div class="container-fluid ">
+			<div class="row">
+			<div class="col-12 col-md-4">
+				<h3 class="fw-bold fuente letra mt-3">Horario de atención:</h3>
+				<p class="letra">Lunes a viernes 7:00 am - 3:00 pm / Sábado: 7:00 am - 2:30 pm / Domingos y festivos 8:00 am - 3:00 pm</p>
+				<br>
+				<h3 class="fw-bold fuente letra">Dirección:</h3>
+				<p class="letra">Belén Altavista Calle 8A # 112-82 </p>
+			</div>
+
+			<div class="col-12 col-md-4">
+				<h3 class="fw-bold fuente letra mt-3">Ayudas:</h3>
+				<p class="letra">Glosario / Correo remoto  /  Monitoreo y desempeño de uso del sitio web</p>
+				<br>
+				<h3 class="fw-bold fuente letra">Protección de datos:</h3>
+				<p class="letra">Protección de datos personales en el Municipio de Medellín </p>
+			</div>
+
+			<div class="col-12 col-md-4">
+				<h1 class="fw-bold fuente letra mt-3"><span><i class="fas fa-paw"></i></span>ANIMALANDIA</h1>
+				<br>
+				<i class="fab fa-facebook fa-2x"></i>
+				<i class="fab fa-instagram fa-2x"></i>
+				<i class="fab fa-youtube fa-2x"></i>
+				<br>
+				<p class="mt-4 letra">© 2021 / NIT: 890905211-1 / Código DANE: 05001 / Código Postal: 050015</p>
+				
+			</div>
+			</div>
+		</footer>
 	</section>
 
 	<script src="https://kit.fontawesome.com/6d1e811add.js" crossorigin="anonymous"></script>
