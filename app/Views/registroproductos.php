@@ -41,6 +41,7 @@
 
     <section>
         <main>
+            <container>
             <div class="container">
 
                 <div class="row d-flex justify-content-center">
@@ -68,11 +69,12 @@
                             </div>
                             <div class="mb-3">
                                 <select class="form-select" aria-label="select" name="tipo">
-                                    <option selected>Perros</option>
-                                    <option value="1">Gatos</option>
-                                    <option value="2">Aves</option>
-                                    <option value="3">Equinos</option>
-                                    <option value="3">Reptiles</option>
+                                    <option selected>Seleccione una opción</option>
+                                    <option value="1">Perros</option>
+                                    <option value="2">Gatos</option>
+                                    <option value="3">Aves</option>
+                                    <option value="4">Equinos</option>
+                                    <option value="5">Reptiles</option>
                                 </select>
                             </div>
 
@@ -87,7 +89,7 @@
                 </div>
 
             </div>
-               
+            </container>
 
         </main>
 

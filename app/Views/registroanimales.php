@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,7 +31,7 @@
                             <a class="nav-link" href="<?= site_url('/productos/registro') ?>">Registro Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= site_url('/animales/registro')?>">Registro Animales</a>
+                            <a class="nav-link" href="<?= site_url('/animales/registro') ?>">Registro Animales</a>
                         </li>
                     </ul>
                 </div>
@@ -41,22 +42,46 @@
     <section>
         <main>
             <container>
+            <div class="container">
                 <div class="row d-flex justify-content-center">
-                    <div class="col-12">   
-                    <h1 class="titulo fuente mt-5 fw-bold">Registro de animales</h1> 
-                     <form action="">
-                     <div class="mb-3">
+                    <div class="col-12">
+                        <h1 class="titulo fuente mt-5 fw-bold">Registro de animales</h1>
+                        <form action="">
+                            <div class="mb-3">
                                 <label for="textarea" class="form-label">Nombre:</label>
                                 <input type="text" class="form-control" id="textarea" name="nombre" aria-describedby="texto">
                                 <div id="texto" class="form-text">Agregue el nombre del animal</div>
                             </div>
-                     </form>
+                            <div class="mb-3">
+                                <label for="edad" class="form-label">Edad</label>
+                                <input type="text" class="form-control" id="photo" name="edad">
+                            </div>
+                            <div class="mb-3">
+                                <label for="FormControlTextarea1" class="form-label">Descripcion</label>
+                                <textarea class="form-control" id="FormControlTextarea1" rows="3" name="descripcion"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select" aria-label="select" name="tipo">
+                                    <option selected>Seleccione una opción</option>
+                                    <option value="1">Perros</option>
+                                    <option value="2">Gatos</option>
+                                    <option value="3">Aves</option>
+                                    <option value="4">Equinos</option>
+                                    <option value="5">Reptiles</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
                     </div>
                 </div>
+            </div>
             </container>
 
         </main>
     </section>
-
+    <script src="https://kit.fontawesome.com/6d1e811add.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
 
 </html>
