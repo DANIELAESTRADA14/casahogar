@@ -29,10 +29,10 @@
 							<a class="nav-link active" aria-current="page" href="<?= site_url('Home')?>">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="<?= site_url('Productos')?>">Registro Productos</a>
+							<a class="nav-link" href="<?= site_url('/productos/registro')?>">Registro Productos</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Registro Animales</a>
+							<a class="nav-link" href="<?= site_url('/animales/registro')?>">Registro Animales</a>
 						</li>
 					</ul>
 				</div>
@@ -101,7 +101,7 @@
 					<div class="col-12 col-md-1">
 						<a href="">
 					<img src="<?= base_url('public/img/horse-icon.png') ?>" class="img-fluid w-100 zoom"  alt="foto"></a>
-					<h2 class="texto">Caballos</h2>
+					<h2 class="texto">Equinos</h2>
 					</div>
 				</div>
 			</div>
