@@ -46,22 +46,22 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-12">
                         <h1 class="titulo fuente mt-5 fw-bold">Registro de animales</h1>
-                        <form action="">
+                        <form action="<?=site_url('/animales/registro/nuevo') ?>" method="POST">
                             <div class="mb-3">
                                 <label for="textarea" class="form-label">Nombre:</label>
-                                <input type="text" class="form-control" id="textarea" name="nombre" aria-describedby="texto">
+                                <input type="text" class="form-control" id="textarea" name="nombre_animal" aria-describedby="texto">
                                 <div id="texto" class="form-text">Agregue el nombre del animal</div>
                             </div>
                             <div class="mb-3">
                                 <label for="edad" class="form-label">Edad</label>
-                                <input type="text" class="form-control" id="photo" name="edad">
+                                <input type="text" class="form-control" id="edad" name="edad">
                             </div>
                             <div class="mb-3">
                                 <label for="FormControlTextarea1" class="form-label">Descripcion</label>
-                                <textarea class="form-control" id="FormControlTextarea1" rows="3" name="descripcion"></textarea>
+                                <textarea class="form-control" id="FormControlTextarea1" rows="3" name="descripcion_animal"></textarea>
                             </div>
                             <div class="mb-3">
-                                <select class="form-select" aria-label="select" name="tipo">
+                                <select class="form-select" aria-label="select" name="tipo_animal">
                                     <option selected>Seleccione una opción</option>
                                     <option value="1">Perros</option>
                                     <option value="2">Gatos</option>
@@ -74,11 +74,47 @@
                             <button type="submit" class="btn btn-primary">Enviar</button>
                         </form>
                     </div>
+                    
+                    <div class="col-12 col-md-4 mb-5">
+                        <img src="<?=base_url('public/img/animales.jpg')?>" alt="adopta" class="img-fluid  rounded mx-auto d-block">
+                    </div>
                 </div>
             </div>
             </container>
 
         </main>
+
+        <footer class="footer">
+            <div class="container-fluid m">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <h3 class="fw-bold fuente letra mt-3">Horario de atención:</h3>
+                        <p class="letra">Lunes a viernes 7:00 am - 3:00 pm / Sábado: 7:00 am - 2:30 pm / Domingos y festivos 8:00 am - 3:00 pm</p>
+                        <br>
+                        <h3 class="fw-bold fuente letra">Dirección:</h3>
+                        <p class="letra">Belén Altavista Calle 8A # 112-82 </p>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <h3 class="fw-bold fuente letra mt-3">Ayudas:</h3>
+                        <p class="letra">Glosario / Correo remoto / Monitoreo y desempeño de uso del sitio web</p>
+                        <br>
+                        <h3 class="fw-bold fuente letra">Protección de datos:</h3>
+                        <p class="letra">Protección de datos personales en el Municipio de Medellín </p>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <h1 class="fw-bold fuente letra mt-3"><span><i class="fas fa-paw"></i></span>ANIMALANDIA</h1>
+                        <br>
+                        <i class="fab fa-facebook fa-2x"></i>
+                        <i class="fab fa-instagram fa-2x"></i>
+                        <i class="fab fa-youtube fa-2x"></i>
+                        <br>
+                        <p class="mt-4 letra">© 2021 / NIT: 890905211-1 / Código DANE: 05001 / Código Postal: 050015</p>
+
+                    </div>
+                </div>
+        </footer>
     </section>
     <script src="https://kit.fontawesome.com/6d1e811add.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
