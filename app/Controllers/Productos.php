@@ -11,12 +11,27 @@ class Productos extends BaseController
 
     public function registrar()
     {
+    
+        //Recibir
         $producto=$this->request->getPost("producto");
         $fotografia=$this->request->getPost("fotografia");
         $precio=$this->request->getPost("precio");
         $descripcion=$this->request->getPost("descripcion");
         $tipo=$this->request->getPost("tipo");
 
+        //Validar
+        if($this->validate('producto')){
+            echo("Guardado");
+        }else {
+
+        $mensaje="tienes datos pendientes";
+        return redirect()->to(site_url(''))->with();
+
+            //echo ("Todos los datos son requeridos");
+        
+        }
+/*
+        //Crear arreglo asociativo
         $datos=array(
 
             "producto"=>$producto, 
@@ -27,6 +42,6 @@ class Productos extends BaseController
 
         );
 
-        print_r($datos);
+        print_r($datos);*/
     }
 }
