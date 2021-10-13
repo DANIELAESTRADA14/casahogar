@@ -24,8 +24,8 @@ class Productos extends BaseController
             echo("Guardado");
         }else {
 
-        $mensaje="tienes datos pendientes";
-        return redirect()->to(site_url(''))->with();
+        $mensaje="Tienes datos pendientes";
+        return redirect()->to(site_url('/productos/registro'))->with('mensaje',$mensaje);
 
             //echo ("Todos los datos son requeridos");
         
