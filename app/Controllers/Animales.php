@@ -16,7 +16,15 @@ class Animales extends BaseController
         $descripcion_animal=$this->request->getPost("descripcion_animal");
         $tipo_animal=$this->request->getPost("tipo_animal");
 
-        $datos_animal=array(
+        if($this->validate('animales')){
+            echo("Guardado");
+        } else {
+            $mensaje="Todos los datos son requeridos";
+            return redirect()->to(site_url('/animales/registro'))->with('mensaje', $mensaje);
+        }
+
+
+     /*   $datos_animal=array(
 
             "nombre_animal"=>$nombre_animal, 
             "edad"=>$edad,
@@ -25,7 +33,7 @@ class Animales extends BaseController
 
         );
 
-        print_r($datos_animal);
+        print_r($datos_animal);*/
     }
 
     
