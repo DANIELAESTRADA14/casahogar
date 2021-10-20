@@ -40,7 +40,7 @@ class Productos extends BaseController
             try {
             $modelo= new ProductoModelo();
             $modelo->insert($datos);
-            return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error->getMessage());
+            return redirect()->to(site_url('/productos/registro'))->with('mensaje', "exito agregando el producto");
 
             }catch(\Exception $error){
                 return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error->getMessage());
