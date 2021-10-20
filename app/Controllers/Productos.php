@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 
+//Se importa el modelo de datos 
+use App\Models\ProductoModelo;
+
 class Productos extends BaseController
 {
     public function index()
@@ -21,27 +24,36 @@ class Productos extends BaseController
 
         //Validar
         if($this->validate('producto')){
-            echo("Guardado");
+
+            //Se organizan datos en array (arreglo)
+            $datos=array(
+
+                "producto"=>$producto, 
+                "fotografia"=>$fotografia,
+                "precio"=>$precio,
+                "descripcion"=>$descripcion,
+                "tipo"=>$tipo
+    
+            );
+
+            //intentamos grabar datos en BD
+            try {
+            $modelo= new ProductoModelo();
+            $modelo->insert($datos);
+            return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error->getMessage());
+
+            }catch(\Exception $error){
+                return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error->getMessage());
+            }
+
+
         }else {
 
         $mensaje="Tienes datos pendientes";
         return redirect()->to(site_url('/productos/registro'))->with('mensaje',$mensaje);
 
-            //echo ("Todos los datos son requeridos");
         
         }
-/*
-        //Crear arreglo asociativo
-        $datos=array(
 
-            "producto"=>$producto, 
-            "fotografia"=>$fotografia,
-            "precio"=>$precio,
-            "descripcion"=>$descripcion,
-            "tipo"=>$tipo
-
-        );
-
-        print_r($datos);*/
     }
 }

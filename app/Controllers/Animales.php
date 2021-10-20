@@ -11,29 +11,29 @@ class Animales extends BaseController
 
     public function animales()
     {
-        $nombre_animal=$this->request->getPost("nombre_animal");
+        $nombre=$this->request->getPost("nombre");
+        $foto=$this->request->getPost("foto");
         $edad=$this->request->getPost("edad");
-        $descripcion_animal=$this->request->getPost("descripcion_animal");
-        $tipo_animal=$this->request->getPost("tipo_animal");
+        $descripcion=$this->request->getPost("descripcion");
+        $tipo=$this->request->getPost("tipo");
 
         if($this->validate('animales')){
-            echo("Guardado");
+            $datos_animal=array(
+
+                "nombre"=>$nombre, 
+                "foto"=>$foto,
+                "edad"=>$edad,
+                "descripcion"=>$descripcion,
+                "tipo"=>$tipo
+    
+            );
+           
         } else {
             $mensaje="Todos los datos son requeridos";
             return redirect()->to(site_url('/animales/registro'))->with('mensaje', $mensaje);
         }
 
 
-     /*   $datos_animal=array(
-
-            "nombre_animal"=>$nombre_animal, 
-            "edad"=>$edad,
-            "descripcion_animal"=>$descripcion_animal,
-            "tipo_animal"=>$tipo_animal
-
-        );
-
-        print_r($datos_animal);*/
     }
 
     

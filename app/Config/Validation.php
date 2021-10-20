@@ -46,10 +46,11 @@ class Validation
     ];
 
     public $animales=[
-        'nombre_animal'=>'required',
+        'nombre'=>'required',
+        'foto'=>'required',
         'edad'=>'required',
-        'descripcion_animal'=>'required',
-        'tipo_animal'=>'required',
+        'descripcion'=>'required',
+        'tipo'=>'required',
     ];
 
     //--------------------------------------------------------------------

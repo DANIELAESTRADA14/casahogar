@@ -49,19 +49,24 @@
                         <form action="<?=site_url('/animales/registro/nuevo') ?>" method="POST">
                             <div class="mb-3">
                                 <label for="textarea" class="form-label">Nombre:</label>
-                                <input type="text" class="form-control" id="textarea" name="nombre_animal" aria-describedby="texto">
+                                <input type="text" class="form-control" id="textarea" name="nombre" aria-describedby="texto">
                                 <div id="texto" class="form-text">Agregue el nombre del animal</div>
                             </div>
+                            <div class="mb-3">
+                                    <label for="photo" class="form-label">Fotografía</label>
+                                    <input type="img" class="form-control" id="photo" name="foto">
+                                </div>
                             <div class="mb-3">
                                 <label for="edad" class="form-label">Edad</label>
                                 <input type="text" class="form-control" id="edad" name="edad">
                             </div>
+                           
                             <div class="mb-3">
                                 <label for="FormControlTextarea1" class="form-label">Descripcion</label>
-                                <textarea class="form-control" id="FormControlTextarea1" rows="3" name="descripcion_animal"></textarea>
+                                <textarea class="form-control" id="FormControlTextarea1" rows="3" name="descripcion"></textarea>
                             </div>
                             <div class="mb-3">
-                                <select class="form-select" aria-label="select" name="tipo_animal">
+                                <select class="form-select" aria-label="select" name="tipo">
                                     <option selected>Seleccione una opción</option>
                                     <option value="1">Perros</option>
                                     <option value="2">Gatos</option>
