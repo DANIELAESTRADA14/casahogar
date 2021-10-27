@@ -83,8 +83,9 @@
 
                         </div>
 
-                        <div class="col-12 col-md-4 mb-5">
+                        <div class="col-12 col-md-4 mb-5 text-center">
                             <img src="<?= base_url('public/img/productos.png') ?>" alt="adopta" class="img-fluid  rounded mx-auto d-block">
+                            <a href="<?= site_url('/productos/listado')   ?>" class="btn btn-primary">Ver inventario</a>
                         </div>
                     </div>
 

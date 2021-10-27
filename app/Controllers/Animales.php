@@ -48,5 +48,8 @@ class Animales extends BaseController
 
     }
 
-    
+    public function buscar()
+    {
+        return view('listaAnimales');
+    }
 }

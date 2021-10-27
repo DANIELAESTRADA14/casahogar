@@ -80,8 +80,9 @@
                         </form>
                     </div>
                     
-                    <div class="col-12 col-md-4 mb-5">
+                    <div class="col-12 col-md-4 mb-5 text-center">
                         <img src="<?=base_url('public/img/animales.jpg')?>" alt="adopta" class="img-fluid  rounded mx-auto d-block">
+                        <a href="<?= site_url('/animales/listado')   ?>" class="btn btn-primary">Ver inventario</a>
                     </div>
                 </div>
             </div>

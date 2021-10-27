@@ -56,4 +56,18 @@ class Productos extends BaseController
         }
 
     }
+
+    public function buscar(){
+        try{
+            $modelo= new ProductoModelo();
+            $resultado=$modelo->findAll();
+            $productos=array('productos'=>$resultado);
+            return view('listaProductos', $productos);
+
+        }catch(\Exception $error) {
+            return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error->getMessage());
+        }
+
+        
+    }
 }
