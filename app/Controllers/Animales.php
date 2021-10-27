@@ -50,6 +50,17 @@ class Animales extends BaseController
 
     public function buscar()
     {
-        return view('listaAnimales');
+        try {
+            $modelo= new AnimalesModelo();
+            $resultado=$modelo->findAll();
+            $animales=array('animales'=>$resultado);
+            //print_r($animales);
+            return view('listaAnimales', $animales);
+
+
+        } catch(\Exception $error) {
+            return redirect()->to(site_url('/animales/registro'))->with('mensaje',$error->getMessage());
+        }
+        
     }
 }

@@ -43,25 +43,26 @@
                         <p class="card-text"><?= $producto["precio"]   ?></p>
                         <p class="card-text"><?= $producto["descripcion"]   ?></p>
                         <a href="#" class="btn btn-primary"><i class="far fa-edit"></i></a>
-                        <a  data-bs-toggle="modal" data-bs-target="#confirmacion"  href="#" class="btn btn-primary"><i class="far fa-trash-alt"></i></a>
+                        <a  data-bs-toggle="modal" data-bs-target="#confirmacion<?=$producto["id"]   ?>"  href="#" class="btn btn-primary"><i class="far fa-trash-alt"></i></a>
                     </div>
                     </div>
 
                     <section>
                                                 <!-- Modal -->
-                        <div class="modal fade" id="confirmacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="confirmacion<?=$producto["id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <div class="modal-header fondo text-white">
+                                <h5 class="modal-title" id="exampleModalLabel">Casa Hogar</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                ...
+                                <p>¿Está seguro de eliminar este producto?</p>
+                                <?= $producto["id"]  ?>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <a href="<?=site_url('/productos/eliminar/'.$producto["id"])?>" class="btn btn-danger">Eliminar</a>
                             </div>
                             </div>
                         </div>
