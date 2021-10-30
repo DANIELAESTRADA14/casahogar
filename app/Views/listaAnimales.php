@@ -43,7 +43,7 @@
                         <p class="card-text"><?= $animal["edad"]   ?></p>
                         <p class="card-text"><?= $animal["descripcion"]   ?></p>
                         <a href="#" class="btn btn-primary"><i class="far fa-edit"></i></a>
-                        <a  data-bs-toggle="modal" data-bs-target="#confirmacion<?=$producto["id"]   ?>"  href="#" class="btn btn-primary"><i class="far fa-trash-alt"></i></a>
+                        <a  data-bs-toggle="modal" data-bs-target="#confirmacion<?=$animal["id"]   ?>"  href="#" class="btn btn-primary"><i class="far fa-trash-alt"></i></a>
                     </div>
                     </div>
 
@@ -62,7 +62,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <a href="<?=site_url('/productos/eliminar/'.$producto["id"])?>" class="btn btn-danger">Eliminar</a>
+                                <a href="<?=site_url('/animales/eliminar/'.$animal["id"])?>" class="btn btn-danger">Eliminar</a>
                             </div>
                             </div>
                         </div>

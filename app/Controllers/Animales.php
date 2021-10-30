@@ -63,4 +63,15 @@ class Animales extends BaseController
         }
         
     }
+
+    public function eliminar($id){
+        try {
+         $modelo= new AnimalModelo();
+         $modelo->where("id",$id)->delete();
+         return redirect()->to(site_url('/animales/registro'))->with('mensaje', "exito eliminando el animal");
+ 
+        }catch(\Exception $error) {
+             return redirect()->to(site_url('/animales/registro'))->with('mensaje',$error->getMessage());
+         }
+     }
 }
