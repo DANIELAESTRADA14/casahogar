@@ -88,7 +88,7 @@ class Productos extends BaseController
         $precio=$this->request->getPost("precio");
 
         //debo hacer validación 
-       
+        if($this->validate('editar')){
         //organizo datos en array asociativo 
         $datos=array(
             'producto'=> $producto, 
@@ -102,14 +102,19 @@ class Productos extends BaseController
         try {
             $modelo= new ProductoModelo();
             $modelo->update($id,$datos);
-            return redirect()->to(site_url('/productos/listado'))->with('mensaje', "exito editando el producto");
+            return redirect()->to(site_url('/productos/registro'))->with('mensaje', "exito editando el producto");
 
             }catch(\Exception $error){
-                return redirect()->to(site_url('/productos/listado'))->with('mensaje',$error->getMessage());
+                return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error->getMessage());
             }
 
 
-        
+        }else {
+
+        $mensaje="Tienes datos pendientes";
+        return redirect()->to(site_url('/productos/registro'))->with('mensaje',$mensaje);
+
+        }
 
     }
 }

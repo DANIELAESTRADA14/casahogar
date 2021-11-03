@@ -74,4 +74,41 @@ class Animales extends BaseController
              return redirect()->to(site_url('/animales/registro'))->with('mensaje',$error->getMessage());
          }
      }
+
+     public function editaranimal($id){
+        //recibo datos
+        $nombre=$this->request->getPost("nombre");
+        $edad=$this->request->getPost("edad");
+
+        //debo hacer validación 
+        if($this->validate('editaranimal')){
+        //organizo datos en array asociativo 
+        $datos=array(
+            'nombre'=> $nombre, 
+            'edad' => $edad
+        );
+
+       // echo("estamos editando el producto".$id);
+        //print_r($datos);
+
+        //crear objeto del modelo
+        try {
+            $modelo= new AnimalesModelo();
+            $modelo->update($id,$datos);
+            return redirect()->to(site_url('/animales/registro'))->with('mensaje', "exito editando el animal");
+
+            }catch(\Exception $error){
+                return redirect()->to(site_url('/animales/registro'))->with('mensaje',$error->getMessage());
+            }
+
+        }else {
+
+            $mensaje="Tienes datos pendientes";
+            return redirect()->to(site_url('/animales/registro'))->with('mensaje',$mensaje);
+    
+            }
+
+       
+
+    }
 }

@@ -83,7 +83,11 @@
                                         <img src="<?= $animal["foto"]  ?>" alt="foto" class="img-fluid w-100">
                                     </div>
                                     <div class="col-9">
-                                        <form action="" method="">
+                                        <form action="<?= site_url('/animales/editaranimal/'.$animal["id"])?>" method="POST">
+                                        <div class="mb-3">
+                                            <label class="form-label">Nombre</label>
+                                            <input type="text" class="form-control" name="nombre" value="<?= $animal["nombre"] ?>">
+                                        </div>
                                         <div class="mb-3">
                                             <label class="form-label">Edad</label>
                                             <input type="number" class="form-control" name="edad"value="<?= $animal["edad"] ?>" >
