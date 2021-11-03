@@ -43,6 +43,8 @@ $routes->delete('/animales/eliminar/(:num)','Animales::eliminar/$1');
 $routes->post('/productos/editar/(:num)','Productos::editar/$1');
 $routes->post('/animales/editaranimal/(:num)','Animales::editaranimal/$1');
 
+$routes->get('/perros', 'Animales::tipo1');
+
 
 /*
  * --------------------------------------------------------------------

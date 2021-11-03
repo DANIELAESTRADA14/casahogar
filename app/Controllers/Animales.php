@@ -107,8 +107,22 @@ class Animales extends BaseController
             return redirect()->to(site_url('/animales/registro'))->with('mensaje',$mensaje);
     
             }
+        }
 
-       
+       public function tipo1(){
 
-    }
+        try {
+            $modelo= new AnimalesModelo();
+            $resultado=$modelo->findAll();
+            $animales=array('animales'=>$resultado);
+            //print_r($animales);
+            return view('perros', $animales);
+
+
+        } catch(\Exception $error) {
+            return redirect()->to(site_url('/animales/registro'))->with('mensaje',$error->getMessage());
+        }
+
+       }
+
 }

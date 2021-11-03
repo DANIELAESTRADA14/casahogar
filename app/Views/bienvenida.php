@@ -79,8 +79,9 @@
 				<div class="row d-flex justify-content-center">
 					<div class="col-12 col-md-1">
 					<a href="">
-						<img src="<?= base_url('public/img/dog-icon.png')?>" alt="icono1" class="img-fluid w-100 zoom">
-					</a>
+					<a class="nav-link" href="<?= site_url('/perros')?>">	<img src="<?= base_url('public/img/dog-icon.png')?>" alt="icono1" class="img-fluid w-100 zoom">
+					</a> </a>
+					
 						<h2 class="texto">Perros</h2>
 					</div>
 					<div class="col-12 col-md-1">
