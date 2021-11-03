@@ -81,4 +81,35 @@ class Productos extends BaseController
             return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error->getMessage());
         }
     }
+
+    public function editar($id){
+        //recibo datos
+        $producto=$this->request->getPost("producto");
+        $precio=$this->request->getPost("precio");
+
+        //debo hacer validación 
+       
+        //organizo datos en array asociativo 
+        $datos=array(
+            'producto'=> $producto, 
+            'precio' => $precio
+        );
+
+       // echo("estamos editando el producto".$id);
+        //print_r($datos);
+
+        //crear objeto del modelo
+        try {
+            $modelo= new ProductoModelo();
+            $modelo->update($id,$datos);
+            return redirect()->to(site_url('/productos/listado'))->with('mensaje', "exito editando el producto");
+
+            }catch(\Exception $error){
+                return redirect()->to(site_url('/productos/listado'))->with('mensaje',$error->getMessage());
+            }
+
+
+        
+
+    }
 }
