@@ -44,7 +44,10 @@ $routes->post('/productos/editar/(:num)','Productos::editar/$1');
 $routes->post('/animales/editaranimal/(:num)','Animales::editaranimal/$1');
 
 $routes->get('/perros', 'Animales::tipo1');
-
+$routes->get('/gatos', 'Animales::tipo2');
+$routes->get('/aves', 'Animales::tipo3');
+$routes->get('/equinos', 'Animales::tipo4');
+$routes->get('/reptiles', 'Animales::tipo5');
 
 /*
  * --------------------------------------------------------------------

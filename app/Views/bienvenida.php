@@ -78,30 +78,30 @@
 			<div class="container mt-5 mb-5">
 				<div class="row d-flex justify-content-center">
 					<div class="col-12 col-md-1">
-					<a href="">
+					
 					<a class="nav-link" href="<?= site_url('/perros')?>">	<img src="<?= base_url('public/img/dog-icon.png')?>" alt="icono1" class="img-fluid w-100 zoom">
-					</a> </a>
+					</a> 
 					
 						<h2 class="texto">Perros</h2>
 					</div>
 					<div class="col-12 col-md-1">
-					<a href="">
-						<img src="<?= base_url('public/img/cat-icon.png') ?>" class="img-fluid w-100 zoom" alt="foto"> </a>
-						<h2 class="texto">Gatos</h2>
+					
+					<a class="nav-link" href="<?= site_url('/gatos')?>">	<img src="<?= base_url('public/img/cat-icon.png') ?>" class="img-fluid w-100 zoom" alt="foto"> </a>
+						<h2 class="texto">Gatos</h2> 
 					</div>
 					<div class="col-12 col-md-1">
-						<a href="">
-					<img src="<?= base_url('public/img/bird-icon.png') ?>" class="img-fluid w-100 zoom"  alt="foto"></a>
+						
+						<a class="nav-link" href="<?= site_url('/aves')?>"><img src="<?= base_url('public/img/bird-icon.png') ?>" class="img-fluid w-100 zoom"  alt="foto"></a>
 					<h2 class="texto">Aves</h2>
 					</div>
 					<div class="col-12 col-md-1">
-						<a href="">
-					<img src="<?= base_url('public/img/fish-icon.png') ?>" class="img-fluid w-100 zoom"   alt="foto"></a>
+						
+						<a class="nav-link" href="<?= site_url('/reptiles')?>"><img src="<?= base_url('public/img/fish-icon.png') ?>" class="img-fluid w-100 zoom"   alt="foto"></a>
 					<h2 class="texto">Reptiles</h2>
 					</div>
 					<div class="col-12 col-md-1">
-						<a href="">
-					<img src="<?= base_url('public/img/horse-icon.png') ?>" class="img-fluid w-100 zoom"  alt="foto"></a>
+						
+						<a class="nav-link" href="<?= site_url('/equinos')?>">	<img src="<?= base_url('public/img/horse-icon.png') ?>" class="img-fluid w-100 zoom"  alt="foto"></a>
 					<h2 class="texto">Equinos</h2>
 					</div>
 				</div>

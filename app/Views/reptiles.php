@@ -35,7 +35,7 @@
 <div class="container">
         <div class="row row-cols-1 row-cols-md-5 g-4 mt-5">
             <?php foreach($animales as $animal): ?>
-                <?php if($animal["tipo"]==1):?>
+                <?php if($animal["tipo"]==5):?>
                 <div class="col">
                 <div class="card h-100 p3">
                     <img src="<?= $animal["foto"] ?>" class="card-img-top h-100" alt="foto">

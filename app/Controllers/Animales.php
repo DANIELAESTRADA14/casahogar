@@ -125,4 +125,69 @@ class Animales extends BaseController
 
        }
 
+       public function tipo2(){
+
+        try {
+            $modelo= new AnimalesModelo();
+            $resultado=$modelo->findAll();
+            $animales=array('animales'=>$resultado);
+            //print_r($animales);
+            return view('gatos', $animales);
+
+
+        } catch(\Exception $error) {
+            return redirect()->to(site_url('/animales/registro'))->with('mensaje',$error->getMessage());
+        }
+
+       }
+
+       public function tipo3(){
+
+        try {
+            $modelo= new AnimalesModelo();
+            $resultado=$modelo->findAll();
+            $animales=array('animales'=>$resultado);
+            //print_r($animales);
+            return view('aves', $animales);
+
+
+        } catch(\Exception $error) {
+            return redirect()->to(site_url('/animales/registro'))->with('mensaje',$error->getMessage());
+        }
+
+       }
+
+       public function tipo4(){
+
+        try {
+            $modelo= new AnimalesModelo();
+            $resultado=$modelo->findAll();
+            $animales=array('animales'=>$resultado);
+            //print_r($animales);
+            return view('equinos', $animales);
+
+
+        } catch(\Exception $error) {
+            return redirect()->to(site_url('/animales/registro'))->with('mensaje',$error->getMessage());
+        }
+
+       }
+
+       
+       public function tipo5(){
+
+        try {
+            $modelo= new AnimalesModelo();
+            $resultado=$modelo->findAll();
+            $animales=array('animales'=>$resultado);
+            //print_r($animales);
+            return view('reptiles', $animales);
+
+
+        } catch(\Exception $error) {
+            return redirect()->to(site_url('/animales/registro'))->with('mensaje',$error->getMessage());
+        }
+
+       }
+
 }
