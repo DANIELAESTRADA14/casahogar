@@ -116,5 +116,88 @@ class Productos extends BaseController
 
         }
 
+        
+       
+
     }
+
+    public function alimentos(){
+
+        try {
+            $modelo= new ProductoModelo();
+            $resultado=$modelo->findAll();
+            $productos=array('productos'=>$resultado);
+            //print_r($animales);
+            return view('alimentos', $productos);
+
+
+        } catch(\Exception $error) {
+            return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error->getMessage());
+        }
+
+       }
+
+       public function aseo(){
+
+        try {
+            $modelo= new ProductoModelo();
+            $resultado=$modelo->findAll();
+            $productos=array('productos'=>$resultado);
+            //print_r($animales);
+            return view('aseo', $productos);
+
+
+        } catch(\Exception $error) {
+            return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error->getMessage());
+        }
+
+       }
+
+       public function accesorios(){
+
+        try {
+            $modelo= new ProductoModelo();
+            $resultado=$modelo->findAll();
+            $productos=array('productos'=>$resultado);
+            //print_r($animales);
+            return view('accesorios', $productos);
+
+
+        } catch(\Exception $error) {
+            return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error->getMessage());
+        }
+
+       }
+
+       public function salud(){
+
+        try {
+            $modelo= new ProductoModelo();
+            $resultado=$modelo->findAll();
+            $productos=array('productos'=>$resultado);
+            //print_r($animales);
+            return view('salud', $productos);
+
+
+        } catch(\Exception $error) {
+            return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error->getMessage());
+        }
+
+       }
+
+       public function juguetes(){
+
+        try {
+            $modelo= new ProductoModelo();
+            $resultado=$modelo->findAll();
+            $productos=array('productos'=>$resultado);
+            //print_r($animales);
+            return view('juguetes', $productos);
+
+
+        } catch(\Exception $error) {
+            return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error->getMessage());
+        }
+
+       }
 }

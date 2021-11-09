@@ -48,6 +48,11 @@ $routes->get('/gatos', 'Animales::tipo2');
 $routes->get('/aves', 'Animales::tipo3');
 $routes->get('/equinos', 'Animales::tipo4');
 $routes->get('/reptiles', 'Animales::tipo5');
+$routes->get('/alimentos', 'Productos::alimentos');
+$routes->get('/aseo', 'Productos::aseo');
+$routes->get('/accesorios', 'Productos::accesorios');
+$routes->get('/salud', 'Productos::salud');
+$routes->get('/juguetes', 'Productos::juguetes');
 
 /*
  * --------------------------------------------------------------------

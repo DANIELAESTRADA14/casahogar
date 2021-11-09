@@ -70,11 +70,11 @@
                                 <div class="mb-3">
                                     <select class="form-select" aria-label="select" name="tipo">
                                         <option selected>Seleccione una opción</option>
-                                        <option value="1">Perros</option>
-                                        <option value="2">Gatos</option>
-                                        <option value="3">Aves</option>
-                                        <option value="4">Equinos</option>
-                                        <option value="5">Reptiles</option>
+                                        <option value="1">Alimentos</option>
+                                        <option value="2">Higiene</option>
+                                        <option value="3">Accesorios</option>
+                                        <option value="4">Salud</option>
+                                        <option value="5">Juguetes</option>
                                     </select>
                                 </div>
 

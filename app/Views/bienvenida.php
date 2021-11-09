@@ -75,9 +75,11 @@
 		</p>
 
 		<main>
+		<h2 class="titulo fuente mt-5 fw-bold">ANIMALES</h2>
 			<div class="container mt-5 mb-5">
 				<div class="row d-flex justify-content-center">
 					<div class="col-12 col-md-1">
+					
 					
 					<a class="nav-link" href="<?= site_url('/perros')?>">	<img src="<?= base_url('public/img/dog-icon.png')?>" alt="icono1" class="img-fluid w-100 zoom">
 					</a> 
@@ -103,6 +105,40 @@
 						
 						<a class="nav-link" href="<?= site_url('/equinos')?>">	<img src="<?= base_url('public/img/horse-icon.png') ?>" class="img-fluid w-100 zoom"  alt="foto"></a>
 					<h2 class="texto">Equinos</h2>
+					</div>
+				</div>
+			</div>
+			
+			<h2 class="titulo fuente mt-5 fw-bold">PRODUCTOS</h2>
+			<div class="container mt-5 mb-5">
+				<div class="row d-flex justify-content-center">
+					<div class="col-12 col-md-1">
+					
+					
+					<a class="nav-link" href="<?= site_url('/alimentos')?>">	<img src="<?= base_url('public/img/hueso.png')?>" alt="icono1" class="img-fluid h-100 zoom ">
+					</a> 
+					
+						<h2 class="texto">Alimentos</h2>
+					</div>
+					<div class="col-12 col-md-1">
+					
+					<a class="nav-link" href="<?= site_url('/aseo')?>">	<img src="<?= base_url('public/img/jabon1.png') ?>" class="img-fluid h-100 zoom" alt="foto"> </a>
+						<h2 class="texto">Aseo</h2> 
+					</div>
+					<div class="col-12 col-md-1">
+						
+						<a class="nav-link" href="<?= site_url('/accesorios')?>"><img src="<?= base_url('public/img/clothes.png') ?>" class="img-fluid w-100 zoom"  alt="foto"></a>
+					<h2 class="texto">Accesorios</h2>
+					</div>
+					<div class="col-12 col-md-1">
+						
+						<a class="nav-link" href="<?= site_url('/salud')?>"><img src="<?= base_url('public/img/veterinaria.png') ?>" class="img-fluid w-100 zoom"   alt="foto"></a>
+					<h2 class="texto">Salud</h2>
+					</div>
+					<div class="col-12 col-md-1">
+						
+						<a class="nav-link" href="<?= site_url('/juguetes')?>">	<img src="<?= base_url('public/img/toy.png') ?>" class="img-fluid w-100 zoom"  alt="foto"></a>
+					<h2 class="texto">Juguetes</h2>
 					</div>
 				</div>
 			</div>
