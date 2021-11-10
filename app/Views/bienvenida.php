@@ -102,7 +102,8 @@
 					<div class="col-12 col-md-1">
 						
 						<a class="nav-link" href="<?= site_url('/reptiles')?>"><img src="<?= base_url('public/img/fish-icon.png') ?>" class="img-fluid w-100 zoom"   alt="foto"></a>
-					<h2 class="texto">Reptiles</h2>
+					<h2 class="texto">Peces/
+						reptiles</h2>
 					</div>
 					<div class="col-12 col-md-1">
 						
