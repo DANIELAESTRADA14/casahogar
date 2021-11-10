@@ -54,6 +54,8 @@ $routes->get('/accesorios', 'Productos::accesorios');
 $routes->get('/salud', 'Productos::salud');
 $routes->get('/juguetes', 'Productos::juguetes');
 
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

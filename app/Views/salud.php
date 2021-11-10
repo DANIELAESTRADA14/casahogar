@@ -44,33 +44,43 @@
                        
                         <p class="card-text"><?= $producto["precio"]   ?></p>
                         <p class="card-text"><?= $producto["descripcion"]   ?></p>
-                        <a  data-bs-toggle="modal" data-bs-target="#compra<?=$producto["id"]   ?>"  href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
+                        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">¿Agregar el producto al carrito?</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Sí</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel2">Carrito de compra</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Producto agregado con éxito
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Regresar</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button"> <i class="fas fa-shopping-cart"></i></a>
                     </div>
                     </div>
                     
                     
-                    <section>
-                                                <!-- Modal -->
-                        <div class="modal fade" id="compra<?=$producto["id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                            <div class="modal-header fondo text-white">
-                                <h5 class="modal-title" id="exampleModalLabel">Casa Hogar</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p>¿Agregar al carrito?</p>
-                                <?= $producto["id"]  ?>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Si</button>
-                                <a href="<?=site_url('/productos/eliminar/'.$producto["id"])?>" class="btn btn-secondary">No</a>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </section>
-                   
+                    
                     
                 </div>
                 <?php endif?>
