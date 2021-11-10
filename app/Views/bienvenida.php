@@ -35,6 +35,9 @@
 							<a class="nav-link" href="<?= site_url('/animales/registro')?>">Registro Animales</a>
 						</li>
 					</ul>
+					<ul>
+            <a class="btn btn-primary mt-2" data-bs-toggle="modal" href="#exampleModalToggle" role="button"> <i class="fas fa-shopping-cart"></i></a>
+            </ul>
 				</div>
 			</div>
 		</nav>

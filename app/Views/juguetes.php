@@ -26,6 +26,9 @@
                     <a class="nav-link active" aria-current="page" href="<?= site_url('Home')?>">Home</a>
                 </li>
             </ul>
+            <ul>
+            <a class="btn btn-primary mt-2" data-bs-toggle="modal" href="#exampleModalToggle" role="button"> <i class="fas fa-shopping-cart"></i></a>
+            </ul>
         </div>
     </div>
 </nav>

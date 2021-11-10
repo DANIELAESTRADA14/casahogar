@@ -26,6 +26,9 @@
                     <a class="nav-link active" aria-current="page" href="<?= site_url('Home')?>">Home</a>
                 </li>
             </ul>
+            <ul>
+            <a class="btn btn-primary mt-2" data-bs-toggle="modal" href="#exampleModalToggle" role="button"> <i class="fas fa-shopping-cart"></i></a>
+            </ul>
         </div>
     </div>
 </nav>
@@ -43,60 +46,84 @@
                         <h5 class="card-title"><?= $animal["nombre"]   ?></h5>
                         <p class="card-text"><?= $animal["edad"]   ?></p>
                         <p class="card-text"><?= $animal["descripcion"]   ?></p>
-                        <a data-bs-toggle="modal" data-bs-target="#editar<?=$animal["id"]   ?>"  href="#" class="btn btn-primary"><i class="far fa-edit"></i></a>
-                        <a  data-bs-toggle="modal" data-bs-target="#confirmacion<?=$animal["id"]   ?>"  href="#" class="btn btn-primary"><i class="far fa-trash-alt"></i></a>
+                        
                     </div>
                     </div>
 
+                   
                     <section>
                                                 <!-- Modal -->
-                        <div class="modal fade" id="confirmacion<?=$animal["id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                
+                    <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">formulario de adopción</button>
+                        
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                            <div class="modal-header fondo text-white">
-                                <h5 class="modal-title" id="exampleModalLabel">Casa Hogar</h5>
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Déjanos tus datos y pronto nos comunicaremos</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p>¿Está seguro de eliminar este animal?</p>
-                                <?= $animal["id"]  ?>
+                                <form>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Teléfono</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Correo</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">Mensaje:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                                </form>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <a href="<?=site_url('/animales/eliminar/'.$animal["id"])?>" class="btn btn-danger">Eliminar</a>
+                                <button type="button" class="btn btn-primary">Enviar solicitud</button>
                             </div>
                             </div>
                         </div>
                         </div>
-                    </section>
-                    <section>
+                            </section>
+                        <section>
                                                 <!-- Modal -->
-                        <div class="modal fade" id="editar<?=$animal["id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        
+                     <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Donaciones</button>
+                        
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                            <div class="modal-header fondo text-white">
-                                <h5 class="modal-title" id="exampleModalLabel">Casa Hogar</h5>
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel1">Gracias por querer ayudar</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-3">
-                                        <img src="<?= $animal["foto"]  ?>" alt="foto" class="img-fluid w-100">
-                                    </div>
-                                    <div class="col-9">
-                                        <form action="<?= site_url('/animales/editaranimal/'.$animal["id"])?>" method="POST">
-                                        <div class="mb-3">
-                                            <label class="form-label">Nombre</label>
-                                            <input type="text" class="form-control" name="nombre" value="<?= $animal["nombre"] ?>">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Edad</label>
-                                            <input type="number" class="form-control" name="edad"value="<?= $animal["edad"] ?>" >
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Editar</button>
-                                        </form>
-                                    </div>
+                                <form>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
                                 </div>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Teléfono</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">Mensaje:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">DONAR</button>
                             </div>
                             </div>
                         </div>
