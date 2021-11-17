@@ -54,7 +54,9 @@ $routes->get('/accesorios', 'Productos::accesorios');
 $routes->get('/salud', 'Productos::salud');
 $routes->get('/juguetes', 'Productos::juguetes');
 
-
+//RUTAS DEL API
+$routes->get('/miercoles/v1/productos', 'APIProductos::buscarProductos');
+$routes->get('/miercoles/v1/productos/(:num)', 'APIProductos::encontrarProductos/$1');
 
 /*
  * --------------------------------------------------------------------
